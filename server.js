@@ -14,10 +14,6 @@ const transactionRoutes = require('./routes/api/transaction');
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost:27017/interclub-challenge', { useMongoClient: true });
 
-app.use(function(req, res, next) {
-	setTimeout(next, 500);
-});
-
 app.use(cors());
 
 app.use('/api', indexRoutes);
